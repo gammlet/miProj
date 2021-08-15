@@ -1,0 +1,82 @@
+let lastDisk
+let ob1 = document.getElementById(ob1)
+
+let ob2 = document.getElementById(ob2)
+
+let ob3 = document.getElementById(ob3)
+let firstPos = [ob1, ob2, ob3]
+console.log(firstPos)
+function goUp(disk){
+  whatDisk = disk
+  if(whatDisk==1){
+    let ob1 = document.getElementById('ob1')
+     ob1.style.width = 65 + 'px'
+     ob1.style.height = 30 + 'px'
+     ob1.style.zIndex = 2
+     ob1.style.boxShadow = "3px 5px 5px black"
+     lastDisk = disk
+     goDown(1)
+  }
+  if(whatDisk==2){
+    let ob2 = document.getElementById('ob2')
+     ob2.style.width = 65 + 'px'
+     ob2.style.height = 30 + 'px'
+     ob2.style.zIndex = 2
+     ob2.style.boxShadow = "3px 5px 5px black"
+     goDown(2)
+  }
+  if(whatDisk==3){
+    let ob3 = document.getElementById('ob3')
+     ob3.style.width = 65 + 'px'
+     ob3.style.height = 30 + 'px'
+     ob3.style.zIndex = 2
+     ob3.style.boxShadow = "3px 5px 5px black"
+     goDown(3)
+  }
+  console.log(disk)
+}
+function goDown(mainDisk){
+  
+  
+  if(mainDisk==1){
+    let ob2 = document.getElementById('ob2')
+     ob2.style.width = 50 + 'px'
+     ob2.style.height = 20 + 'px'
+     ob2.style.zIndex = 1
+     ob2.style.boxShadow = 'none'
+
+     let ob3 = document.getElementById('ob3')
+     ob3.style.width = 50 + 'px'
+     ob3.style.height = 20 + 'px'
+     ob3.style.zIndex = 1
+     ob3.style.boxShadow = 'none'
+     
+  }
+  if(mainDisk==2){
+    let ob1 = document.getElementById('ob1')
+     ob1.style.width = 50 + 'px'
+     ob1.style.height = 20 + 'px'
+     ob1.style.zIndex = 1
+     ob1.style.boxShadow = 'none'
+
+     ob3 = document.getElementById('ob3')
+     ob3.style.width = 50 + 'px'
+     ob3.style.height = 20 + 'px'
+     ob3.style.zIndex = 1
+     ob3.style.boxShadow = 'none'
+  }
+  if(mainDisk==3){
+    let ob1 = document.getElementById('ob1')
+    ob1.style.width = 50 + 'px'
+    ob1.style.height = 20 + 'px'
+    ob1.style.zIndex = 1
+    ob1.style.boxShadow = 'none'
+
+    let ob2 = document.getElementById('ob2')
+     ob2.style.width = 50 + 'px'
+     ob2.style.height = 20 + 'px'
+     ob2.style.zIndex = 1
+     ob2.style.boxShadow = 'none'
+
+  }
+}
